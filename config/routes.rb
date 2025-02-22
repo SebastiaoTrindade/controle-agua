@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'dashboard/index'
+  root 'dashboard#index'
+
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
