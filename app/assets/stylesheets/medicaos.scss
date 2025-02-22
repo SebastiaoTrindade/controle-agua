@@ -1,3 +1,18 @@
-// Place all the styles related to the Medicaos controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.hidrometro-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hidrometro-input {
+    position: absolute;
+    top: 60px; /* Ajuste fino para alinhar no visor */
+    left: 38%; /* Ajuste fino para centralizar */
+    width: 92px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+  }
+  
