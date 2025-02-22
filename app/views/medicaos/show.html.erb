@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @medicao.user %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @medicao.data %>
+</p>
+
+<p>
+  <strong>Medicao manha:</strong>
+  <%= @medicao.medicao_manha %>
+</p>
+
+<p>
+  <strong>Medicao tarde:</strong>
+  <%= @medicao.medicao_tarde %>
+</p>
+
+<p>
+  <strong>Consumo total:</strong>
+  <%= @medicao.consumo_total %>
+</p>
+
+<%= link_to 'Edit', edit_medicao_path(@medicao) %> |
+<%= link_to 'Back', medicaos_path %>

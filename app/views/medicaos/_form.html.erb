@@ -1,0 +1,42 @@
+<%= form_with(model: medicao, local: true) do |form| %>
+  <% if medicao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medicao.errors.count, "error") %> prohibited this medicao from being saved:</h2>
+
+      <ul>
+      <% medicao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.date_select :data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medicao_manha %>
+    <%= form.text_field :medicao_manha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medicao_tarde %>
+    <%= form.text_field :medicao_tarde %>
+  </div>
+
+  <div class="field">
+    <%= form.label :consumo_total %>
+    <%= form.text_field :consumo_total %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

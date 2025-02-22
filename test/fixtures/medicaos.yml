@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  data: 2025-02-21
+  medicao_manha: 9.99
+  medicao_tarde: 9.99
+  consumo_total: 9.99
+
+two:
+  user: two
+  data: 2025-02-21
+  medicao_manha: 9.99
+  medicao_tarde: 9.99
+  consumo_total: 9.99
