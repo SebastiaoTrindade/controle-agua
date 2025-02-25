@@ -1,3 +1,50 @@
-// Place all the styles related to the Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://cdn.pixabay.com/photo/2023/06/06/15/55/finance-8045003_1280.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+  #login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 380px;
+    border: 1px solid #9C9C9C;
+    background-color: rgba(0,0,0,0.7) !important;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -103px;
+  }
+
+  #notice {
+    transition: opacity 1s ease-out; 
+  }
+
+  .form h3{
+    color: white;
+    font-weight: bold;
+  }
+
+  .input-group-prepend span{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+  }
+
+  .form-group .btn-warning{
+    color: black;
+    background-color: #FFC312;
+    width: 100px;
+    font-weight: bold;
+  }
+    
+  .form-group .btn-warning:hover{
+    color: black;
+    background-color: white;
+  }

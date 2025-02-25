@@ -1,2 +1,72 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>    
+    <div id="alert-container"> 
+        <% if flash[:notice] %>
+            <div id="notice" class="alert alert-success">
+                <%= flash[:notice] %>
+            </div>
+        <% elsif flash[:alert] %>
+            <div id="notice" class="alert alert-danger">
+                <%= flash[:alert] %>
+            </div>
+    <% end %>
+        
+    </div>
+
+    <div id="login">        
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <div id="login-form" class="form">
+                            <%= form_with url: login_path, scope: :session, method: :post, class: "form" do |f| %>
+                                <h3 class="text-center mb-5">Login Rails 7</h3>
+                                    <div class="input-group form-group mb-4">   
+                                        
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        </div>
+                                        <%= f.text_field :email, id: "email", class: "form-control" %>
+                                    </div>
+                                    <div class="input-group form-group">   
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                        </div>
+                                        <%= f.password_field :password, class: "form-control mb-0", id: "password" %>
+                                    </div> 
+                                    <br>                                   
+                                    <div class="form-group">
+                                        <%= f.check_box :remember_me, id: "remember-me" %>
+                                        <%= f.label :remember_me, "Lembrar a senha", class: "text-white" %>
+                                        <br>
+                                        <%= f.submit "Entrar", id: "submit-button", class: "btn btn-warning btn-md mt-3" %>
+                                    </div>
+                                                              
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script personalizado -->
+    <script src="/assets/main.js"></script>
+
+</body>
+</html>
