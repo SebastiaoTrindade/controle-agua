@@ -17,7 +17,7 @@ class MedicaosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create medicao" do
     assert_difference('Medicao.count') do
-      post medicaos_url, params: { medicao: { consumo_total: @medicao.consumo_total, data: @medicao.data, medicao_manha: @medicao.medicao_manha, medicao_tarde: @medicao.medicao_tarde, user_id: @medicao.user_id } }
+      post medicaos_url, params: { medicao: { consumo_total: @medicao.consumo_total, data: @medicao.data, manha: @medicao.manha, tarde: @medicao.tarde, user_id: @medicao.user_id } }
     end
 
     assert_redirected_to medicao_url(Medicao.last)
@@ -34,7 +34,7 @@ class MedicaosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update medicao" do
-    patch medicao_url(@medicao), params: { medicao: { consumo_total: @medicao.consumo_total, data: @medicao.data, medicao_manha: @medicao.medicao_manha, medicao_tarde: @medicao.medicao_tarde, user_id: @medicao.user_id } }
+    patch medicao_url(@medicao), params: { medicao: { consumo_total: @medicao.consumo_total, data: @medicao.data, manha: @medicao.manha, tarde: @medicao.tarde, user_id: @medicao.user_id } }
     assert_redirected_to medicao_url(@medicao)
   end
 

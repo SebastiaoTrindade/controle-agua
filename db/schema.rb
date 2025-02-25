@@ -10,30 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_02_22_023858) do
+ActiveRecord::Schema.define(version: 2025_02_25_180141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "medicaos", force: :cascade do |t|
+  create_table "medicoes", force: :cascade do |t|
     t.bigint "user_id"
     t.date "data"
-    t.decimal "medicao_manha"
-    t.decimal "medicao_tarde"
+    t.decimal "manha"
+    t.decimal "tarde"
     t.decimal "consumo_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_medicaos_on_user_id"
+    t.index ["user_id"], name: "index_medicoes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "nome"
     t.string "email"
-    t.string "senha_digest"
+    t.string "password_digest"
     t.string "foto"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "medicaos", "users"
+  add_foreign_key "medicoes", "users"
 end

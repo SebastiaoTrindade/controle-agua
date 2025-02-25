@@ -16,8 +16,8 @@ class MedicaosTest < ApplicationSystemTestCase
 
     fill_in "Consumo total", with: @medicao.consumo_total
     fill_in "Data", with: @medicao.data
-    fill_in "Medicao manha", with: @medicao.medicao_manha
-    fill_in "Medicao tarde", with: @medicao.medicao_tarde
+    fill_in "Manha", with: @medicao.manha
+    fill_in "Tarde", with: @medicao.tarde
     fill_in "User", with: @medicao.user_id
     click_on "Create Medicao"
 
@@ -31,8 +31,8 @@ class MedicaosTest < ApplicationSystemTestCase
 
     fill_in "Consumo total", with: @medicao.consumo_total
     fill_in "Data", with: @medicao.data
-    fill_in "Medicao manha", with: @medicao.medicao_manha
-    fill_in "Medicao tarde", with: @medicao.medicao_tarde
+    fill_in "Manha", with: @medicao.manha
+    fill_in "Tarde", with: @medicao.tarde
     fill_in "User", with: @medicao.user_id
     click_on "Update Medicao"
 

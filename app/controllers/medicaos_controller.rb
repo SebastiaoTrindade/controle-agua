@@ -1,4 +1,5 @@
 class MedicaosController < ApplicationController
+  layout false
   before_action :set_medicao, only: %i[ show edit update destroy ]
 
   # GET /medicaos or /medicaos.json
@@ -65,6 +66,6 @@ class MedicaosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def medicao_params
-      params.require(:medicao).permit(:user_id, :data, :medicao_manha, :medicao_tarde, :consumo_total)
+      params.require(:medicao).permit(:user_id, :data, :manha, :tarde, :consumo_total)
     end
 end

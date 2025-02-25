@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
-  before_action :logged_in_user
+  before_action :logged_in_user, except: [:new, :create]
   
   private
 
