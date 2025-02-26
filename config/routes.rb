@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   # Session Dashboard
   get 'dashboard', to: 'dashboard#index'
   
-  resources :medicaos
+  resources :medicoes
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

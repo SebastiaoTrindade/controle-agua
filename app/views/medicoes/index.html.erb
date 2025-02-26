@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <h2 class="text-center my-4">Registro de Medição - <%= Date.today.strftime("%d/%m/%Y") %></h2>
+
+  <div class="row justify-content-center mt-4">
+    <!-- Medição da Manhã -->
+    <div class="col-md-5 text-center position-relative">
+      <h4>Medição da Manhã</h4>
+      <div class="hidrometro-container">
+        <img src="<%= asset_path('hidrometro_manha.jpg') %>" alt="Hidrometro Manhã" class="img-fluid rounded shadow">
+        <input type="text" id="medicao-manha" class="hidrometro-input" placeholder="0000000" maxlength="7">
+      </div>
+      <div class="mt-3">
+        <button id="salvar-manha" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+
+    <!-- Medição da Tarde -->
+    <div class="col-md-5 text-center position-relative">
+      <h4>Medição da Tarde</h4>
+      <div class="hidrometro-container">
+        <img src="<%= asset_path('hidrometro_tarde.jpg') %>" alt="Hidrometro Tarde" class="img-fluid rounded shadow">
+        <input type="text" id="medicao-tarde" class="hidrometro-input" placeholder="0000000" maxlength="7">
+      </div>
+      <div class="mt-3">
+        <button id="salvar-tarde" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Exibir Consumo Total -->
+  <div class="text-center mt-4">
+    <h3>Consumo Total do Dia: <span id="consumo-total" class="text-success">
+      <%= @medicoes.find_by(data: Date.today)&.consumo_total || 0 %> m³
+    </span></h3>
+  </div>
+</div>
