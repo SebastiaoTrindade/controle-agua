@@ -1,5 +1,6 @@
 class MedicaosController < ApplicationController
-  layout false
+  
+  before_action :logged_in_user
   before_action :set_medicao, only: %i[ show edit update destroy ]
 
   # GET /medicaos or /medicaos.json

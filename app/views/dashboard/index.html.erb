@@ -1,2 +1,56 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard do Sistema</title>
+
+  <!-- Usando a versão do Bootstrap 4.3.1 da gem -->
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <style>
+    /* Garante que tudo fique bem centralizado */
+    .dashboard-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Faz ocupar a tela toda */
+    }
+    .dashboard-title {
+      margin-bottom: 20px;
+    }
+    .dashboard-image {
+      max-width: 60%; /* Garante que a imagem se ajuste */
+      height: auto;
+    }
+    .dashboard-button {
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="container dashboard-container">
+    <!-- Título -->
+    <h1 class="text-center dashboard-title">Dashboard do Sistema</h1>
+
+    <!-- Imagem -->
+    <div class="text-center">
+      <img src="https://i.gifer.com/75ez.gif" alt="Logo" class="img-fluid dashboard-image">
+    </div>  
+
+    <!-- Botão Logout -->
+    <div class="dashboard-button">
+      <%= form_with url: logout_path, method: :delete, class: "d-inline" do %>
+        <button type="submit" class="btn btn-danger btn-lg">Logout</button>
+      <% end %>
+    </div>        
+  </div>
+
+  <!-- Incluindo os scripts do Bootstrap 4.3.1 -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+</body>
+</html>
