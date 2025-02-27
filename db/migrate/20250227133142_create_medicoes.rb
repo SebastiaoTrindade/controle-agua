@@ -1,4 +1,4 @@
-class CreateMedicaos < ActiveRecord::Migration[5.2]
+class CreateMedicoes < ActiveRecord::Migration[5.2]
   def change
     create_table :medicoes do |t|
       t.references :user, foreign_key: true
@@ -11,3 +11,4 @@ class CreateMedicaos < ActiveRecord::Migration[5.2]
     end
   end
 end
+
